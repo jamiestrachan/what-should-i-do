@@ -1,0 +1,14 @@
+{
+  "name": "what-should-i-do",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jamiestrachan/what-should-i-do.git"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
