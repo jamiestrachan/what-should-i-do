@@ -1,0 +1,131 @@
+body {
+	background: #E9CE87 url("bg.jpg");
+	color: #000;
+	font-family: 'Ubuntu', Verdana, Geneva, sans-serif;
+}
+
+#pagecontainer {
+	margin: 0 auto;
+	min-width: 330px;
+	width: 50%;
+}
+
+h1 {
+	color: #765300;
+	font-size: 2.3em;
+	margin: 2em 0 1.5em;
+	text-shadow: 1px 1px 1px #C78C00;
+}
+
+#theanswer {
+	font-size: 4em;
+	font-weight: bold;
+	margin: 0.7em 0 1em;
+	text-align: center;
+}
+
+#actions {
+	margin: 2em 0;
+	text-align: center;
+}
+	#actions button {
+		border-width: 0;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-o-border-radius: 10px;
+		-ms-border-radius: 10px;
+		-khtml-border-radius: 10px;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+		color: #fff;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 1.5em;
+		margin: 0 20px;
+		padding: 8px 20px;
+		text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+		text-transform: uppercase;
+	}
+	#actions #done {
+		background: #47b435;
+		background: -moz-linear-gradient(top, #47b435 0%, #1e8a0f 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#47b435), color-stop(100%,#1e8a0f));
+		background: -webkit-linear-gradient(top, #47b435 0%,#1e8a0f 100%);
+		background: -o-linear-gradient(top, #47b435 0%,#1e8a0f 100%);
+		background: -ms-linear-gradient(top, #47b435 0%,#1e8a0f 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47b435', endColorstr='#1e8a0f',GradientType=0 );
+		background: linear-gradient(top, #47b435 0%,#1e8a0f 100%);
+		border: 1px solid #1e8a0f;
+	}
+	#actions #done:active {
+		background: #1e8a0f;
+		background: -moz-linear-gradient(top, #1e8a0f 0%, #47b435 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e8a0f), color-stop(100%,#47b435));
+		background: -webkit-linear-gradient(top, #1e8a0f 0%,#47b435 100%);
+		background: -o-linear-gradient(top, #1e8a0f 0%,#47b435 100%);
+		background: -ms-linear-gradient(top, #1e8a0f 0%,#47b435 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e8a0f', endColorstr='#47b435',GradientType=0 );
+		background: linear-gradient(top, #1e8a0f 0%,#47b435 100%);
+		position: relative;
+		top: 1px;
+	}
+	#actions #skip {
+		background: #bd3c3c;
+		background: -moz-linear-gradient(top, #bd3c3c 0%, #8a1510 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bd3c3c), color-stop(100%,#8a1510));
+		background: -webkit-linear-gradient(top, #bd3c3c 0%,#8a1510 100%);
+		background: -o-linear-gradient(top, #bd3c3c 0%,#8a1510 100%);
+		background: -ms-linear-gradient(top, #bd3c3c 0%,#8a1510 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bd3c3c', endColorstr='#8a1510',GradientType=0 );
+		background: linear-gradient(top, #bd3c3c 0%,#8a1510 100%);
+		border: 1px solid #8a1510;
+	}
+	#actions #skip:active {
+		background: #8a1510;
+		background: -moz-linear-gradient(top, #8a1510 0%, #bd3c3c 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8a1510), color-stop(100%,#bd3c3c));
+		background: -webkit-linear-gradient(top, #8a1510 0%,#bd3c3c 100%);
+		background: -o-linear-gradient(top, #8a1510 0%,#bd3c3c 100%);
+		background: -ms-linear-gradient(top, #8a1510 0%,#bd3c3c 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8a1510', endColorstr='#bd3c3c',GradientType=0 );
+		background: linear-gradient(top, #8a1510 0%,#bd3c3c 100%);
+		position: relative;
+		top: 1px;
+	}
+	
+#addform {
+	background: rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	margin: 8em auto 0;
+	min-width: 330px;
+	padding: 10px 15px;
+	width: 65%;
+}
+	#addform h2 {
+		display: inline-block;
+		font-size: 1.4em;
+		margin: 0 25px 0 0;
+	}
+	#addform form {
+		display: inline-block;
+		font-size: 1.1em;
+	}
+	#addform label {
+		display: inline-block;
+		margin-right: 5px;
+	}
+	#addform input, #addform select {
+		display: inline-block;
+		margin-right: 10px;
+	}
+	#addform #task {
+		background: #fff;
+		border: 1px solid #666;
+	}
+	#addform #task.saved {
+		background: #dfd;
+		border: 1px solid green;
+	}

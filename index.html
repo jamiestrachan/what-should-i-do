@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>What Should I Do?</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="whatshouldido.js"></script>
+<script>var wsid = WhatShouldIDo("theanswer");</script>
+
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700">
+<link rel="stylesheet" type="text/css" href="whatshouldido.css" />
+<style type="text/css">
+#addform, #actions { display: none; }
+</style>
+</head>
+
+<body>
+
+<div id="pagecontainer">
+
+<h1>What Should I Do?</h1>
+  
+  <div id="theanswer">Get a browser that supports JavaScript and localStorage</div>
+  <form id="actions">
+    <button id="done">Done!</button>
+      <button id="skip">Skip...</button>
+  </form>
+  
+  <div id="addform">
+      <h2>Add a task</h2>
+      <form id="newitem">
+          <label for="task">Description:</label>
+          <input type="text" id="task" />
+          <!--<label for="frequency">Frequency:</label>
+          <select id="frequency">
+              <option>Once</option>
+              <option>Daily</option>
+              <option>Weekly</option>
+              <option>Bi-weekly</option>
+              <option>Monthly</option>
+          </select>-->
+          <button type="submit">Save</button>
+      </form>
+  </div>
+
+</div>
+
+<script>
+if (wsid.areWeGood()) {
+	$("#addform, #actions").show();
+	
+	wsid.answer();
+
+	$("#newitem").submit(function (e) {
+		if ($("#task").val() !== "") {
+			wsid.addToList($("#task").val(), $("#frequency").val());
+			$("#task").val("");
+			$("#task").addClass("saved");
+			setTimeout(function () { $("#task").removeClass("saved"); }, 600);
+		}
+		return false;
+	});
+	$("#done").click(function (e) {
+		wsid.completeTask();
+		return false;
+	});
+	$("#skip").click(function (e) {
+		wsid.skipTask();
+		return false;
+	});
+} else {
+	$("#addform, #actions").remove();
+}
+</script>
+
+<!--
+TO DO:
+- help text (New here? link that reveals it)
+- recurring items
+-->
+</body>
+</html>
