@@ -32,7 +32,7 @@ Task = function (desc, freq, urg, last) {
 	};
 
 	return theTask;
-}
+};
 
 WhatShouldIDo = function (containerId) {
 	var WSID = {}; // the object
@@ -83,7 +83,7 @@ WhatShouldIDo = function (containerId) {
 	
 	/// public functions
 	WSID.areWeGood = function () {
-		return (('localStorage' in window) && (window['localStorage'] !== null));
+		return (('localStorage' in window) && (window.localStorage !== null));
 	};
 	
 	WSID.addToList = function (task, frequency) {
