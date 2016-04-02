@@ -1,0 +1,2 @@
+- https://medium.com/javascript-scene/how-to-use-es6-for-isomorphic-javascript-apps-2a9c3abe5ea2#.t0ra62bzc
+- http://www.sitepoint.com/setting-up-es6-project-using-babel-browserify/
