@@ -1,93 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>What Should I Do?</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="whatshouldido.js"></script>
-<script>var wsid = WhatShouldIDo("theanswer");</script>
 
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700">
+
 <link rel="stylesheet" type="text/css" href="whatshouldido.css" />
-<style type="text/css">
-#addform, #actions { display: none; }
-</style>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-6297247-1', 'auto');
-  ga('send', 'pageview');
-
-</script> 
 
 </head>
 
 <body>
 
-<div id="pagecontainer">
-
-<h1>What Should I Do?</h1>
-  
-  <div id="theanswer">Get a browser that supports JavaScript and localStorage</div>
-  <form id="actions">
-    <button id="done">Done!</button>
-      <button id="skip">Skip...</button>
-  </form>
-  
-  <div id="addform">
-      <h2>Add a task</h2>
-      <form id="newitem">
-          <label for="task">Description:</label>
-          <input type="text" id="task" />
-          <!--<label for="frequency">Frequency:</label>
-          <select id="frequency">
-              <option>Once</option>
-              <option>Daily</option>
-              <option>Weekly</option>
-              <option>Bi-weekly</option>
-              <option>Monthly</option>
-          </select>-->
-          <button type="submit">Save</button>
-      </form>
-  </div>
-
-</div>
-
-<script>
-if (wsid.areWeGood()) {
-	$("#addform, #actions").show();
-	
-	wsid.answer();
-
-	$("#newitem").submit(function (e) {
-		if ($("#task").val() !== "") {
-			wsid.addToList($("#task").val(), $("#frequency").val());
-			$("#task").val("");
-			$("#task").addClass("saved");
-			setTimeout(function () { $("#task").removeClass("saved"); }, 600);
-		}
-		return false;
-	});
-	$("#done").click(function (e) {
-		wsid.completeTask();
-		return false;
-	});
-	$("#skip").click(function (e) {
-		wsid.skipTask();
-		return false;
-	});
-} else {
-	$("#addform, #actions").remove();
-}
-</script>
-
-<!--
-TO DO:
-- help text (New here? link that reveals it)
-- recurring items
--->
 </body>
 </html>
