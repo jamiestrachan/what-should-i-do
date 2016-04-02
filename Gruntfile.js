@@ -4,8 +4,23 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-    	all: ['Gruntfile.js', '*.js']
+		options: {
+			"esnext": true
+		},
+    	all: ['Gruntfile.js', 'src/*.js']
     },
+    browserify: {
+		dist: {
+			options: {
+				transform: [
+					["babelify", { "presets": ["es2015"] }]
+				]
+			},
+			files: {
+				"./js/whatshouldido.js": ["./src/whatshouldido.js"]
+			}
+		}
+	},
     csslint: {
     	lax: {
     		src: ['*.css']
@@ -13,7 +28,7 @@ module.exports = function(grunt) {
     },
     watch: {
     	src: {
-    		files: ['*.js', '*.css'],
+    		files: ['src/*.js', '*.css'],
     		tasks: ['default']
     	}	
     }
@@ -21,8 +36,9 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-csslint');
+  grunt.loadNpmTasks("grunt-browserify");
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  grunt.registerTask('default', ['jshint', 'csslint']);
+  grunt.registerTask('default', ['jshint', 'browserify', 'csslint']);
 
 };
