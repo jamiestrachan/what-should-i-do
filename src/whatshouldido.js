@@ -1,3 +1,4 @@
+import {verifyStorage, save, load} from './storage';
 import Task from './Task';
 
 WhatShouldIDo = function (containerId) {
@@ -35,7 +36,8 @@ WhatShouldIDo = function (containerId) {
 			toStore.push(taskList[i].toString());
 		}
 		
-		localStorage["wsid.items"] = '{"items": [' + toStore.join(",") + ']}';
+		//localStorage["wsid.items"] = '{"items": [' + toStore.join(",") + ']}';
+		save(`{"items": [ ${toStore.join(",")} ]}`);		
 	}
 	
 	function selectAnswer(index) {
@@ -49,7 +51,7 @@ WhatShouldIDo = function (containerId) {
 	
 	/// public functions
 	WSID.areWeGood = function () {
-		return (('localStorage' in window) && (window.localStorage !== null));
+		return verifyStorage();
 	};
 	
 	WSID.addToList = function (task, frequency) {

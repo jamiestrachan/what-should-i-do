@@ -1,10 +1,10 @@
-export default function Task(desc, freq, urg, last) {
+export default function Task(desc, freq = "Once", urg = 0, last = "") {
 	var theTask = {}; // the object
 	
 	/// private variables
 	var description = desc;
-	var frequency = freq || "Once";
-	var urgency = urg || 0;
+	var frequency = freq;
+	var urgency = urg;
 	var lastDone = last;
 	
 	urgency = parseInt(urgency, 10); // could be coming in as a string
