@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>What Should I Do?</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script src="whatshouldido.js"></script>
 <script>var wsid = WhatShouldIDo("theanswer");</script>
 
-<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu:400,700">
 <link rel="stylesheet" type="text/css" href="whatshouldido.css" />
 <style type="text/css">
 #addform, #actions { display: none; }
@@ -21,7 +21,7 @@
   ga('create', 'UA-6297247-1', 'auto');
   ga('send', 'pageview');
 
-</script> 
+</script>
 
 </head>
 
@@ -30,13 +30,13 @@
 <div id="pagecontainer">
 
 <h1>What Should I Do?</h1>
-  
+
   <div id="theanswer">Get a browser that supports JavaScript and localStorage</div>
   <form id="actions">
     <button id="done">Done!</button>
       <button id="skip">Skip...</button>
   </form>
-  
+
   <div id="addform">
       <h2>Add a task</h2>
       <form id="newitem">
@@ -59,7 +59,7 @@
 <script>
 if (wsid.areWeGood()) {
 	$("#addform, #actions").show();
-	
+
 	wsid.answer();
 
 	$("#newitem").submit(function (e) {

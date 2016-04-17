@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "http://github.com/jamiestrachan/what-should-i-do.git"
+    "url": "https://github.com/jamiestrachan/what-should-i-do.git"
   },
   "devDependencies": {
     "grunt": "^0.4.4",
